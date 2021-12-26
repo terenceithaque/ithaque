@@ -1,3 +1,4 @@
+/* Affiche le message d'information */
 function info(e) {
   let message = document.body.dataset.msg;
   let magot = e.key;
