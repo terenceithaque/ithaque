@@ -3,6 +3,13 @@
 * {
   box-sizing: border-box;
 }
+p {
+  color: yellow;
+}
+
+body {
+  background-color: red;
+}
 
 .container {
   max-width: 800px;
