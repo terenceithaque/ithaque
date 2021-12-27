@@ -6,6 +6,7 @@
 }
 p {
   color: yellow;
+  margin: 18px 0;
 }
 
 body {
@@ -17,6 +18,7 @@ body {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 24px;
 }
 
 img {
@@ -27,6 +29,7 @@ img {
 h1 {
   font-family: "Permanent Marker";
   color: blue;
+  cursor: pointer;
 }
 
 .info {
@@ -47,6 +50,18 @@ h1 {
 
 .info::after {
   content: "i";
+}
+
+a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+h1 > a {
+  display: inline-block;
+  color: violet;
+  text-decoration: none;
+  padding: 24px;
 }
 
 @media screen and (max-width: 800px) {
