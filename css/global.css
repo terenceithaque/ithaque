@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 
 * {
+  margin: 0;
   box-sizing: border-box;
 }
 p {
@@ -8,7 +9,8 @@ p {
 }
 
 body {
-  background-color: red;
+  position: relative;
+  background-color: #333;
 }
 
 .container {
@@ -25,4 +27,30 @@ img {
 h1 {
   font-family: "Permanent Marker";
   color: blue;
+}
+
+.info {
+  display: none;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin: 8px;
+  text-align: center;
+  background-color: black;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+.info::after {
+  content: "i";
+}
+
+@media screen and (max-width: 800px) {
+  .info {
+    display: block;
+  }
 }

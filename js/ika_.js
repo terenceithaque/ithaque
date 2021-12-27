@@ -7,7 +7,7 @@ function info(b) {
 
   if (fafa === "i" || fafa === "I") {
     alert(
-      "Appelée Ithaca à l'époque Romano-byzantine, elle était également connue sous les noms de Itacha, Thiaki, Dulichia ou Val di Compare"
+      "Appelée Ithaca à l'époque Romano-byzantine, elle était également connue sous les noms de Itacha, Thiaki, Dulichia ou Val di Compare."
     );
   }
 }
