@@ -1,0 +1,102 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Menu</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/confirm.css" />
+  </head>
+  <body
+    data-msg="Cette action désactivera les boîtes d'alerte (qui donnent des infos supplémentaires). Voulez-vous vraiment continuer?"
+  >
+    <h1><a href="index.html">terenceithaque</a></h1>
+    <div class="container">
+      <p>Paramètres</p>
+      <p>Changer les couleurs</p>
+      <button class="change-colorblue">Bleu</button>
+      <button class="change-colorbrown">Marron (original)</button>
+      <button class="change-colorgold">Doré</button>
+      <p>Alertes</p>
+      <button class="remove-alerte">Désactiver les boîtes d'alerte</button>
+    </div>
+  </body>
+  <script src="js/confirm.js"></script>
+
+  <script>
+    confirm.setText(
+      "Cette action désactivera les boîtes d'alerte (qui donnent des infos supplémentaires). Voulez-vous vraiment continuer?",
+      "J'ai changé d'avis",
+      "Désactiver quand même"
+    );
+
+    // function monAlerte(e) {
+    //   let mok = e.key;
+    //   if (mok === "i" || mok === "I") {
+    //     alert("I");
+    //   }
+    // }
+
+    // window.addEventListener("keypress", monAlerte);
+
+    // On définit les éléments bouton
+
+    let elButtonRemoveAlerte = document.querySelector(".remove-alerte");
+    elButtonRemoveAlerte.addEventListener("click", selectionAlerte);
+
+    function selectionAlerte() {
+      confirm.show();
+    }
+
+    let isAlertActive = true;
+
+    function avertissement() {
+      // isAlertActive = confirm(
+      //   "Cette action désactivera les boîtes d'alerte (qui donnent des infos supplémentaires). Voulez-vous vraiment continuer? "
+      // );
+      // let elButton = document.createElement("button");
+      // let elButton2 = document.createElement("button2");
+      // elButton.innerHTML = "Désactiver quand même";
+      // elButton2.innerHTML = "J'ai changé d'avis";
+      // let elBox = document.createElement("div");
+      // elBox.classList.add("avertissement");
+      // document.body.appendChild(elBox);
+      // let elAvertissement = document.createElement("div");
+      // elBox.appendChild(elAvertissement);
+      // function info(e) {
+      //   let message = document.body.dataset.msg;
+      //   if (e.type === "click")
+      //     //    alert(message);
+      //     elMessage.innerHTML = message;
+      //   elBox.classList.add("visibleAvertissement");
+      // }
+    }
+
+    function closeBox(e) {
+      elBox.classList.remove("visibleAvertissement");
+    }
+
+    console.log("avertissement");
+    let elButtonChangeColorblue = document.querySelector(".change-colorblue");
+    elButtonChangeColorblue.addEventListener("click", changeColorblue);
+
+    let elButtonChangeColorbrown = document.querySelector(".change-colorbrown");
+    elButtonChangeColorbrown.addEventListener("click", changeColorbrown);
+
+    let elButtonChangeColorgold = document.querySelector(".change-colorgold");
+    elButtonChangeColorgold.addEventListener("click", changeColorgold);
+    // On définit les fonctions de changement de couleur de l'élément body
+    function changeColorblue(e) {
+      let elBody = document.body;
+      elBody.classList.add("blue");
+    }
+
+    function changeColorbrown(e) {
+      let elBody = document.body;
+      elBody.classList.remove("blue");
+    }
+
+    function changeColorgold(e) {
+      let elBody = document.body;
+      elBody.classList.add("gold");
+    }
+  </script>
+</html>

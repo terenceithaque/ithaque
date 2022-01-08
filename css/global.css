@@ -17,6 +17,13 @@ body {
   background-color: brown;
 }
 
+body.blue {
+  background-color: blue;
+}
+body.gold {
+  background-color: gold;
+}
+
 .container {
   max-width: 800px;
   width: 100%;
@@ -68,7 +75,8 @@ h1 > a {
   cursor: pointer;
 }
 
-.message {
+.message,
+.avertissement {
   display: none;
   position: fixed;
   top: 0;
@@ -83,7 +91,8 @@ h1 > a {
   transform: translateX(50%) translateY(50%);
 }
 
-.message.visible {
+.message.visible,
+.avertissement.visibleAvertissement {
   display: block;
 }
 
