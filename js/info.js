@@ -1,7 +1,9 @@
 // On crée un élément <div class="info"></div> (qui affiche l'icône "i") et on le place dans <body>
 let elInfo = document.createElement("div");
 elInfo.classList.add("info");
-document.body.appendChild(elInfo);
+
+document.querySelector(".header-right").appendChild(elInfo);
+//document.body.appendChild(elInfo);
 
 // On crée des event listeners pour le clic et le clavier, et on appelle la fonction info.
 elInfo.addEventListener("click", info);

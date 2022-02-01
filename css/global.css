@@ -51,7 +51,25 @@ header {
   align-items: center;
 }
 
+.header-right {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
 .info {
+  display: none;
+  text-align: center;
+  background-color: black;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* .info {
   display: none;
   position: absolute;
   top: 0px;
@@ -65,7 +83,7 @@ header {
   font-size: 24px;
   color: white;
   cursor: pointer;
-}
+} */
 
 .info::after {
   content: "i";
@@ -115,7 +133,13 @@ h1 > a {
   height: 30px;
 }
 .githubimage {
+  /* margin-right: 44px; */
   width: 50px;
   height: 50px;
-  margin-right: 12px;
 }
+
+/* 
+header > * {
+  outline: solid 1px white;
+}
+*/
