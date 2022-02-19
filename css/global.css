@@ -143,3 +143,21 @@ header > * {
   outline: solid 1px white;
 }
 */
+
+#snackbarvisible {
+  visibility: visible;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: rgb(5, 1, 1);
+  color: white;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+}
+#snackbarvisble.hidden {
+  visibility: hidden;
+}
