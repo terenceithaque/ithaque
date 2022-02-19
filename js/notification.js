@@ -1,5 +1,5 @@
-let elsnackbarvisible = document.querySelector("snackbar");
+//let elsnackbarvisible = document.querySelector("snackbar");
 
-function createNotification(e) {
-  elsnackbarvisible.classList.add("hidden");
-}
+//function createNotification(e) {
+  //elsnackbarvisible.classList.add("hidden");
+//}
