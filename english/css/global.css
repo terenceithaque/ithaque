@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+p {
+  color: rgb(209, 175, 175);
+  margin: 18px 0;
+  font-family: "Oswald";
+  cursor: text;
+}
+
+body {
+  position: relative;
+  background-color: brown;
+}
+
+body.blue {
+  background-color: blue;
+}
+body.gold {
+  background-color: gold;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+h1 {
+  font-family: "Permanent Marker";
+  color: blue;
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: center;
+}
+
+.header-right {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.info {
+  display: none;
+  text-align: center;
+  background-color: black;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* .info {
+  display: none;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin: 8px;
+  text-align: center;
+  background-color: black;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+} */
+
+.info::after {
+  content: "i";
+}
+
+a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+h1 > a {
+  display: inline-block;
+  color: violet;
+  text-decoration: none;
+  padding: 24px;
+  cursor: pointer;
+}
+
+.message,
+.avertissement {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 90%;
+  max-width: 500px;
+  min-height: 200px;
+  background-color: rgb(165, 97, 42);
+  color: rgb(209, 175, 175);
+  font-family: "Oswald";
+  padding: 18px 48px;
+  transform: translateX(50%) translateY(50%);
+}
+
+.message.visible,
+.avertissement.visibleAvertissement {
+  display: block;
+}
+
+@media screen and (max-width: 800px) {
+  .info {
+    display: block;
+  }
+}
+.button {
+  width: 30px;
+  height: 30px;
+}
+.githubimage {
+  /* margin-right: 44px; */
+  width: 50px;
+  height: 50px;
+}
+
+/* 
+header > * {
+  outline: solid 1px white;
+}
+*/
+#snackbarvisible {
+  visibility: visible;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: rgb(5, 1, 1);
+  color: white;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  animation: fadein 0.5s, fadeout 0.5s;
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
