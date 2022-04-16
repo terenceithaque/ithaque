@@ -28,6 +28,13 @@
       *Partiellement traduit avec DeepL. La traduction peut être incorrecte.
     </p>
     <p>*Partly translated with DeepL. The translation is maybe inccorect.</p>
+    <!-- <p>Notifications de mises à jour</p>-->
+    <!--<select id="confirm-notification">
+      <option>
+        Ne pas recevoir de notifications de mises à jour via mon addresse email
+      </option>
+      <option>Rentrer mon addresse email</option>
+    </select>-->
 
     <script src="js/returnhomepage.js"></script>
     <script src="js/confirm.js"></script>
@@ -48,12 +55,16 @@
         lang = elLanguageSelector.value;
         window.localStorage.setItem("language", lang); // language peut être soit "en" soit "fr"
 
-        if (lang === "fr") {
-          window.location = "index.html";
-        } else if (lang === "en") {
+        if (lang === "en") {
           window.location = "english/index.html";
+        } else if (lang === "fr") {
+          window.location = "../index.html";
         }
       }
+      //elConfirmNotification = document.querySelector("#confirm-notification");
+      //elConfirmNotification.addEventListener("change", function (e) {
+      //  window.location = "email.html";
+      //});
     </script>
   </body>
 </html>
