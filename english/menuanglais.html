@@ -26,11 +26,19 @@
       <option value="fr">Français</option>
     </select>
 
+    <p>Background color</p>
+    <p>Change Background color</p>
+    <p><button class="goldbutton">Gold</button></p>
+    <p><button class="greenbutton">Green</button></p>
+    <p><button class="originalbutton">Original</button></p>
+
     <script src="../js/returnhomepage.js"></script>
 
     <script src="../js/confirm.js"></script>
+    <script src="../js/couleur.js"></script>
 
     <script>
+      couleur();
       let lang = window.localStorage.getItem("language") || "fr";
 
       let elCurrentOption = document.querySelector(
@@ -53,6 +61,27 @@
           window.location = "../index.html";
         }
       }
+      function themeOr() {
+        window.localStorage.setItem("couleur", "or");
+        couleur();
+      }
+      function themeVert() {
+        window.localStorage.setItem("couleur", "vert");
+        couleur();
+      }
+      function themeOriginal() {
+        window.localStorage.setItem("couleur", "original");
+        couleur();
+      }
+
+      elBoutonOr = document.querySelector(".goldbutton");
+      elBoutonOr.addEventListener("click", themeOr);
+
+      elBoutonVert = document.querySelector(".greenbutton");
+      elBoutonVert.addEventListener("click", themeVert);
+
+      elBoutonOriginal = document.querySelector(".originalbutton");
+      elBoutonOriginal.addEventListener("click", themeOriginal);
     </script>
   </body>
 </html>

@@ -17,11 +17,17 @@ body {
   background-color: brown;
 }
 
-body.blue {
-  background-color: blue;
-}
-body.gold {
+body.or {
+  transition: 2s;
   background-color: gold;
+}
+body.vert {
+  transition: 2s;
+  background-color: green;
+}
+body.original {
+  transition: 2s;
+  background-color: brown;
 }
 
 .container {
