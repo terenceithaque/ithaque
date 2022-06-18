@@ -199,3 +199,18 @@ header > * {
     margin: 5px;
   }
 }
+
+.notification {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 90%;
+  max-width: 500px;
+  min-height: 200px;
+  background-color: rgb(165, 97, 42);
+  color: rgb(209, 175, 175);
+  font-family: "Oswald";
+  padding: 18px 48px;
+  transform: translateX(50%) translateY(50%);
+}
