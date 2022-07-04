@@ -27,9 +27,13 @@
 
     <p>Background color</p>
     <p>Change Background color</p>
-    <p><button class="goldbutton">Gold</button></p>
-    <p><button class="greenbutton">Green</button></p>
-    <p><button class="originalbutton">Original</button></p>
+    <p>
+      <button class="goldbutton">Gold</button>
+      <button class="greenbutton">Green</button>
+      <button class="chocolatebutton">Chocolate</button>
+      <button class="coralbutton">Coral</button>
+      <button class="originalbutton">Original</button>
+    </p>
 
     <script src="../js/returnhomepage.js"></script>
 
@@ -73,6 +77,16 @@
         couleur();
       }
 
+      function themeChocolat() {
+        window.localStorage.setItem("couleur", "chocolat");
+        couleur();
+      }
+
+      function themeCoral() {
+        window.localStorage.setItem("couleur", "corallien");
+        couleur();
+      }
+
       elBoutonOr = document.querySelector(".goldbutton");
       elBoutonOr.addEventListener("click", themeOr);
 
@@ -81,6 +95,12 @@
 
       elBoutonOriginal = document.querySelector(".originalbutton");
       elBoutonOriginal.addEventListener("click", themeOriginal);
+
+      let elBoutonChocolat = document.querySelector(".chocolatebutton");
+      elBoutonChocolat.addEventListener("click", themeChocolat);
+
+      let elBoutonCoral = document.querySelector(".coralbutton");
+      elBoutonCoral.addEventListener("click", themeCoral);
     </script>
   </body>
 </html>

@@ -32,9 +32,13 @@
 
     <p>Couleur de fond</p>
     <p>Changer la couleur de fond</p>
-    <p><button class="goldbutton">Or</button></p>
-    <p><button class="greenbutton">Vert</button></p>
-    <p><button class="originalbutton">Original</button></p>
+    <p>
+      <button class="goldbutton">Or</button>
+      <button class="greenbutton">Vert</button>
+      <button class="chocolatebutton">Chocolat</button>
+      <button class="coralbutton">Corallien</button>
+      <button class="originalbutton">Original</button>
+    </p>
 
     <script src="js/returnhomepage.js"></script>
     <script src="js/confirm.js"></script>
@@ -71,19 +75,34 @@
         window.localStorage.setItem("couleur", "vert");
         couleur();
       }
+
       function themeOriginal() {
         window.localStorage.setItem("couleur", "original");
         couleur();
       }
+      function themeChocolat() {
+        window.localStorage.setItem("couleur", "chocolat");
+        couleur();
+      }
 
-      elBoutonOr = document.querySelector(".goldbutton");
+      function themeCoral() {
+        window.localStorage.setItem("couleur", "corallien");
+        couleur();
+      }
+      let elBoutonOr = document.querySelector(".goldbutton");
       elBoutonOr.addEventListener("click", themeOr);
 
-      elBoutonVert = document.querySelector(".greenbutton");
+      let elBoutonVert = document.querySelector(".greenbutton");
       elBoutonVert.addEventListener("click", themeVert);
 
-      elBoutonOriginal = document.querySelector(".originalbutton");
+      let elBoutonOriginal = document.querySelector(".originalbutton");
       elBoutonOriginal.addEventListener("click", themeOriginal);
+
+      let elBoutonChocolat = document.querySelector(".chocolatebutton");
+      elBoutonChocolat.addEventListener("click", themeChocolat);
+
+      let elBoutonCoral = document.querySelector(".coralbutton");
+      elBoutonCoral.addEventListener("click", themeCoral);
     </script>
   </body>
 </html>

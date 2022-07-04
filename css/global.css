@@ -21,10 +21,19 @@ body.or {
   transition: 2s;
   background-color: gold;
 }
+body.chocolat {
+  transition: 2s;
+  background-color: chocolate;
+}
 body.vert {
   transition: 2s;
   background-color: green;
 }
+body.corallien {
+  transition: 2s;
+  background-color: coral;
+}
+
 body.original {
   transition: 2s;
   background-color: brown;
@@ -213,4 +222,8 @@ header > * {
   font-family: "Oswald";
   padding: 18px 48px;
   transform: translateX(50%) translateY(50%);
+}
+
+button {
+  border-radius: 5px;
 }
