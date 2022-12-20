@@ -34,6 +34,11 @@ body.corallien {
   background-color: coral;
 }
 
+body.nuit {
+  transition: 2s;
+  background-color: rgb(82, 80, 80);
+}
+
 body.original {
   transition: 2s;
   background-color: brown;
@@ -226,4 +231,9 @@ header > * {
 
 button {
   border-radius: 5px;
+}
+
+/*img.night {
+  width: 50px;
+  height: 50px;
 }

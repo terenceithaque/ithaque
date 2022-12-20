@@ -12,8 +12,8 @@
     <header>
       <h1><a href="index.html">terenceithaque</a></h1>
       <div class="header-right">
-        <a href="https://github.com/terenceithaque/ithaque"
-          ><img
+        <a href="https://github.com/terenceithaque/ithaque">
+          <img
             class="githubimage"
             src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpngimg.com%2Fuploads%2Fgithub%2Fgithub_PNG40.png&f=1&nofb=1"
         /></a>
@@ -39,6 +39,16 @@
       <button class="coralbutton">Corallien</button>
       <button class="originalbutton">Original</button>
     </p>
+
+    <!--<p>Mode nuit</p>
+    <p>
+      Vous regardez ce site à une heure tardive ? Le mode nuit préserve votre
+      vision en mettant un thème sombre au site.
+    </p>
+    <select id="mode">
+      <option value="day" selected>Jour (Désactivé)</option>
+      <option value="night">Nuit (Activé)</option>
+    </select>-->
 
     <script src="js/returnhomepage.js"></script>
     <script src="js/confirm.js"></script>
@@ -103,6 +113,19 @@
 
       let elBoutonCoral = document.querySelector(".coralbutton");
       elBoutonCoral.addEventListener("click", themeCoral);
+
+      let elMode = document.getElementById("mode");
+      elMode.addEventListener("change", changeMode);
+
+      function changeMode(e) {
+        value = e.target.value;
+        window.localStorage.setItem("mode", value);
+        if (value === "night") {
+        }
+      }
+
+      let value = window.localStorage.getItem("mode") || "day";
     </script>
+    <script src="js/nightmode.js"></script>
   </body>
 </html>
