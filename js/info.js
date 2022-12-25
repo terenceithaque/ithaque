@@ -22,6 +22,8 @@ let elButton = document.createElement("button");
 elButton.innerHTML = "OK";
 elButton.addEventListener("click", closeBox);
 elBox.appendChild(elButton);
+// Raccourci pour appeler 'closeBoxKeyboard' avec le clavier
+window.addEventListener("keydown", closeBox);
 
 /**
  * info
@@ -39,5 +41,7 @@ function info(e) {
 }
 
 function closeBox(e) {
-  elBox.classList.remove("visible");
+  if (!(e.type === "keydown" && e.key !== "Escape")) {
+    elBox.classList.remove("visible");
+  }
 }
