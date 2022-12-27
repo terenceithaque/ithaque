@@ -40,6 +40,16 @@
       <button class="originalbutton">Original</button>
     </p>
 
+    <p>Données de stockage local</p>
+    <p>
+      Ce site enregistre des données sur votre appareil (ordinateur,
+      smartphone,...), notamment pour afficher la couleur de fond configurée
+      lors des prochaines visites. Vous pouvez cependant supprimer ces données.
+      Il faudra recharger la page pour que la suppression soit visible.
+    </p>
+
+    <button class="data-remove">Supprimer les données de stockage local</button>
+
     <!--<p>Mode nuit</p>
     <p>
       Vous regardez ce site à une heure tardive ? Le mode nuit préserve votre
@@ -114,8 +124,8 @@
       let elBoutonCoral = document.querySelector(".coralbutton");
       elBoutonCoral.addEventListener("click", themeCoral);
 
-      let elMode = document.getElementById("mode");
-      elMode.addEventListener("change", changeMode);
+      //let elMode = document.getElementById("mode");
+      //elMode.addEventListener("change", changeMode);
 
       function changeMode(e) {
         value = e.target.value;
@@ -125,6 +135,15 @@
       }
 
       let value = window.localStorage.getItem("mode") || "day";
+
+      let elButtonDataRemove = document.querySelector(".data-remove");
+      elButtonDataRemove.addEventListener("click", removeData);
+
+      function removeData() {
+        // Effacer les données de stockage local
+        window.localStorage.removeItem("couleur", "language");
+        // console.log("Données effacées !");
+      }
     </script>
     <script src="js/nightmode.js"></script>
   </body>

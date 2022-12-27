@@ -43,6 +43,16 @@
       <button class="originalbutton">Original</button>
     </p>
 
+    <p>Local storage datas</p>
+    <p>
+      This site saves datas on your device (computer, smartphone,...) in order
+      to do things like displaying configured background color for upcoming
+      sessions. But, whenever you want, you can remove these datas. You will
+      need to reload this page for suppression to be visible.
+    </p>
+
+    <button class="data-remove">Remove all local storage datas</button>
+
     <script src="../js/returnhomepage.js"></script>
 
     <script src="../js/confirm.js"></script>
@@ -109,6 +119,15 @@
 
       let elBoutonCoral = document.querySelector(".coralbutton");
       elBoutonCoral.addEventListener("click", themeCoral);
+
+      let elButtonDataRemove = document.querySelector(".data-remove");
+      elButtonDataRemove.addEventListener("click", removeData);
+
+      function removeData() {
+        // Effacer les données de stockage local
+        window.localStorage.removeItem("couleur", "language");
+        // console.log("Données effacées !");
+      }
     </script>
   </body>
 </html>
