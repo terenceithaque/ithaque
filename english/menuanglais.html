@@ -39,6 +39,7 @@
       <button class="chocolatebutton">Chocolate</button>
       <button class="coralbutton">Coral</button>
       <button class="originalbutton">Original</button>
+      <button class="darkbutton">Dark</button>
     </p>
 
     <p>Local storage datas</p>
@@ -103,6 +104,11 @@
         couleur();
       }
 
+      function themeDark(){
+        window.localStorage.setItem("couleur", "noir");
+        couleur();
+      }
+
       elBoutonOr = document.querySelector(".goldbutton");
       elBoutonOr.addEventListener("click", themeOr);
 
@@ -117,6 +123,9 @@
 
       let elBoutonCoral = document.querySelector(".coralbutton");
       elBoutonCoral.addEventListener("click", themeCoral);
+
+      let elBoutonDark = document.querySelector(".darkbutton");
+      elBoutonDark.addEventListener("click", themeDark);
 
       let elButtonDataRemove = document.querySelector(".data-remove");
       elButtonDataRemove.addEventListener("click", removeData);

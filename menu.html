@@ -36,6 +36,7 @@
       <button class="chocolatebutton">Chocolat</button>
       <button class="coralbutton">Corallien</button>
       <button class="originalbutton">Original</button>
+      <button class="darkbutton">Sombre</button>
     </p>
 
     <p>Données de stockage local</p>
@@ -107,6 +108,11 @@
         window.localStorage.setItem("couleur", "corallien");
         couleur();
       }
+
+      function themeDark(){
+        window.localStorage.setItem("couleur", "noir");
+        couleur();
+      }
       let elBoutonOr = document.querySelector(".goldbutton");
       elBoutonOr.addEventListener("click", themeOr);
 
@@ -121,6 +127,9 @@
 
       let elBoutonCoral = document.querySelector(".coralbutton");
       elBoutonCoral.addEventListener("click", themeCoral);
+
+      let elBoutonDark = document.querySelector(".darkbutton");
+      elBoutonDark.addEventListener("click", themeDark);
 
       //let elMode = document.getElementById("mode");
       //elMode.addEventListener("change", changeMode);

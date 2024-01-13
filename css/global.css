@@ -44,6 +44,12 @@ body.original {
   background-color: brown;
 }
 
+body.noir{
+  transition: 2s;
+  background-color: black;
+  
+}
+
 .container {
   max-width: 800px;
   width: 100%;

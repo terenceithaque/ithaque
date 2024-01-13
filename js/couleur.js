@@ -1,5 +1,6 @@
 function couleur() {
   let color = window.localStorage.getItem("couleur");
+  console.log("Couleur de fond :", color);
 
   document.body.setAttribute("class", color);
   // document.body.classList.add(color);
